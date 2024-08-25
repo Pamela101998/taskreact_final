@@ -1,10 +1,10 @@
-import Logo from './Default/_components/Logo';
-import Description from "./Default/_components/Description";
-import OpenLink from "../components/OpenLink";
-import LessonInfo from './Default/_components/LessonInfo';
+import Logo from './_components/Logo';
+import Description from "./_components/Description";
+import OpenLink from "../../components/OpenLink";
+import LessonInfo from './_components/LessonInfo';
 
 
-import Contador from './Default/_components/Contador';
+import Contador from './_components/Contador';
 import React from 'react';
 
 const Default = () => {

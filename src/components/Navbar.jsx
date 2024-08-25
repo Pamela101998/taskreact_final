@@ -8,13 +8,17 @@ const Navbar = () => {
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/default">Default</Link>
-                </li>
-                <li>
                     <Link to="/product">Product</Link>
                 </li>
                 <li>
                     <Link to="/login">LoginForm</Link>
+                </li>
+                <li>
+                    <Link to="/default">Default</Link>
+                </li>
+
+                <li>
+                    <h5>Bienvenido:</h5>
                 </li>
             </ul>
         </nav>
