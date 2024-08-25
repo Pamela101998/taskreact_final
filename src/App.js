@@ -1,14 +1,12 @@
 import './App.css';
 
-import Navbar from "./components/Navbar";
-import { Outlet } from 'react-router-dom';
+import Default from "./screens/Default";
 
 function App() {
   return (
-    <>
-        <Navbar />
-        <Outlet />
-    </>
+    <div className="App">
+        <Default />
+    </div>
   );
 }
 

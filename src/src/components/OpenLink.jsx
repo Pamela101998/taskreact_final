@@ -1,15 +1,15 @@
-const OpenLink = ({title, url}) =>{
+const OpenLink = ({ title, url }) => {
     return (
-        <>
+        <div>
             <a
                 className="App-link"
-                href= {url}
+                href={url}
                 target="_blank"
                 rel="noopener noreferrer"
             >
                 {title}
             </a>
-        </>
+        </div>
     );
 };
 
