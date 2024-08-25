@@ -1,16 +1,16 @@
-const Content = () => {
+const GitHub = () =>{
     return (
-        <div>
+        <>
             <a
                 className="App-link"
-                href="https://github.com/dheeyi/desarrollo-frontend-react"
+                href="https://github.com/Pamela101998/react_clases"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                Mi proyecto react (GitHub)
+               Mi proyecto React (Git Hub)
             </a>
-        </div>
+        </>
     );
 };
 
-export default Content;
+export default GitHub;

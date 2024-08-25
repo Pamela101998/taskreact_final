@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import Default from "../screens/Default";
-import Product from "../screens/Product";
-import LoginForm from "../screens/Forms/LoginForm";
+import Default from '../screens/Default';
+import Product from '../screens/Product';
+// import LoginForm from "../screens/Forms/";
 
 import App from "../App";
 
@@ -20,10 +20,10 @@ const routes = createBrowserRouter([
                 path: '/products',
                 element: <Product />,
             },
-            {
-                path: '/login',
-                element: <LoginForm />,
-            },
+            // {
+            //     path: '/login',
+            //     element: <LoginForm />,
+            // },
         ]
     }
 ],

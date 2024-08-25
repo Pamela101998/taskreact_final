@@ -1,49 +1,53 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Contador = () => {
-    const [contador, setContador] = useState(0);
-    const handleContador1 = () => {
-        setContador(contador + 1);
+
+//UseState tiene 2 partes, una variable, y una función que le cambia su valor
+    const [contador, setContador]= useState(10);
+
+
+    const handleContador = () => {
+        setContador (contador + 1);
     };
-    const handleContador2 = () => {
-        setContador(contador - 1);
+    const handle2Contador = () => {
+    
+        setContador (contador - 1);
     };
 
-    // Esta funcion especial se ejecuta cuando el componente
-    // se haya montado
-    // []
-    useEffect(() => {
-        setContador(12);
+//useEffect para controlar ciclo de vida
+
+    useEffect (() => {
+        setContador (12);
     }, []);
 
-    // Esta funcion especial se ejecuta cuando haya cambiado
-    // el valor de contador
-    // [contador]
-    useEffect(() => {
-        if (contador === 15) {
-            alert('contador es 15');
+    
+    useEffect (() => {
+        if (contador === 15){
+            alert ('contador es 15');
         }
+
     }, [contador]);
 
-    // esta funcion especials e ejcuta cuando el componente
-    // se desmonta
-    useEffect(() => {
-        return () => {
-            console.log('El componenete se desmonto');
-        }
-    });
-
+//función especial que se ejecuta cuando el componente se desmonta
+useEffect (() =>{
+    return () => {
+        console.log ('el component se desmontó');
+    }
+});
 
     return (
         <>
-            <h4>Componente Contador</h4>
-            <h5>{contador}</h5>
+            <h4>Componente contador</h4>
+            <h3>{contador}</h3>
             <div>
-                <button onClick={handleContador1}>Aumentar</button>
-                <button onClick={handleContador2}>Disminuir</button>
+                <button onClick={handleContador}>Aumentar</button>
+                <button onClick={handle2Contador}>Disminuir</button>
+
+
             </div>
         </>
     );
+
 };
 
 export default Contador;

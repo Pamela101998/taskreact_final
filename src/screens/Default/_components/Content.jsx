@@ -1,6 +1,6 @@
-const Content = () => {
+const Content = () =>{
     return (
-        <div>
+        <>
             <a
                 className="App-link"
                 href="https://reactjs.org"
@@ -9,7 +9,7 @@ const Content = () => {
             >
                 Learn React
             </a>
-        </div>
+        </>
     );
 };
 
