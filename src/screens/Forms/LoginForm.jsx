@@ -10,13 +10,14 @@ import { useState } from "react";
 const LoginForm = () => {
     const [values, handleChange] = useForm({ username: '', email: '', password: ''});
     const [showModalInfo, setShowModalInfo] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
     const form = useSelector(state => state.form);
     const dispatch = useDispatch();
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        // Verificación de la contraseña antes de guardar los datos
+        // para verificar la contraseña antes de guardar los datos
         if (values.password === '123456') {
             console.log('Datos guardados:', values);
             dispatch(saveFormData(values)); 
@@ -32,7 +33,10 @@ const LoginForm = () => {
 
     const showModal = () => {
         setShowModalInfo(true);
-    }
+    };
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
 
     return (
         <motion.div
@@ -72,15 +76,24 @@ const LoginForm = () => {
                     </div>
                     <div>
                         <label htmlFor="password">Password</label>
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            value={values.password}
-                            onChange={handleChange}
-                        />
-                    </div>
-                 
+                        <div style={{ position: 'relative' }}>
+                            <input
+                                type={showPassword ? 'text' : 'password'}
+                                id="password"
+                                name="password"
+                                value={values.password}
+                                onChange={handleChange}
+                               
+                            />
+                        </div>
+                        <button
+                                type="button"
+                                onClick={togglePasswordVisibility}
+                               
+                            >
+                                {showPassword ? 'Hide' : 'Show'}
+                            </button>
+                        </div>
                     <div className="button-container">
                         <button type="submit">Submit</button>
                        
