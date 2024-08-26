@@ -16,7 +16,7 @@ const LandingPage = () => {
                 />
 
                    <Cuerpo
-                        tema1="Componetes funcionales y de clase"
+                        tema1="Componentes funcionales y de clase"
                         tema2="Uso de React Hooks como useState y useEffect"
                         tema3="Creación de custom Hooks como useForm"
                         tema4="Gestión de variables de estado con useState"
@@ -25,11 +25,12 @@ const LandingPage = () => {
                         tema7="Manejo de Formularios en React"
                         tema8="Publicando nuestra Pagina con GitHub Pages"
                    />
-                   <Footer className="abajo"
-                        year="2024 " 
-                        module="Módulo 7 "
-                   />
+                  
                  </header>
+                 <Footer
+                        // year="2024 " 
+                        // module="Módulo 7 "
+                   />
             </div>   
         </>
     );

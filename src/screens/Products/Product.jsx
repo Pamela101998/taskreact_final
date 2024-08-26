@@ -1,5 +1,6 @@
-import FilterableProductTable from './_componentes/FilterableProductTable';
 import React from 'react';
+import FilterableProductTable from './_componentes/FilterableProductTable';
+
 const PRODUCTS = [
   { category: 'Fruits', price: '$1', stocked: true, name: 'Apple' },
   { category: 'Fruits', price: '$1', stocked: true, name: 'Dragonfruit' },
@@ -9,19 +10,18 @@ const PRODUCTS = [
   { category: 'Vegetables', price: '$1', stocked: true, name: 'Peas' }
 ];
 
-
 const Product = () => {
-    return (
-        <>
-            <div>
-            
-            <FilterableProductTable products={PRODUCTS} />;
-            </div>
-        </>
-    );
-};
-export default Product ;
+ 
 
+  return (
+    <div>
+      <h1>Product List</h1>
+      <FilterableProductTable products={PRODUCTS} />
+    </div>
+  );
+};
+
+export default Product;
 
 
    
