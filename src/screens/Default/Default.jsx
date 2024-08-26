@@ -10,7 +10,7 @@ import React from 'react';
 const Default = () => {
     return (
         <>
-            <header className="App-header">
+            <header className="App-header1">
             
                 <Contador />
                 <Logo />
