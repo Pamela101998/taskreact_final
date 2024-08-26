@@ -4,11 +4,12 @@ import {saveFormData} from "../../redux/form/formActions";
 import { setUsername } from "../../redux/form/formActions";
 import { motion } from 'framer-motion';
 import ModalInfo from "../../components/ModalInfo";
+// import { Link } from "react-router-dom";
 
 import { useState } from "react";
 
 const LoginForm = () => {
-    const [values, handleChange] = useForm({ username: '', email: '', password: ''});
+    const [values, handleChange, resetForm] = useForm({ username: '', email: '', password: ''});
     const [showModalInfo, setShowModalInfo] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const form = useSelector(state => state.form);
@@ -30,12 +31,17 @@ const LoginForm = () => {
     const hideModalInfo = () => {
         setShowModalInfo(false);
     };
-
+   
     const showModal = () => {
         setShowModalInfo(true);
     };
+   
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
+    };
+    const handleLogout = () => {
+        resetForm(true); 
+        // <Link to="/"></Link>
     };
 
     return (
@@ -49,6 +55,9 @@ const LoginForm = () => {
                 message="Password incorrecto"
                 onClose={hideModalInfo}
             />
+           
+
+
             <div className="container">
                 <form onSubmit={handleSubmit}>
                     <h5>username: {form.formData.username}</h5>
@@ -88,16 +97,17 @@ const LoginForm = () => {
                         </div>
                         <button
                                 type="button"
-                                onClick={togglePasswordVisibility}
-                               
+                                onClick={togglePasswordVisibility} 
                             >
                                 {showPassword ? 'Hide' : 'Show'}
-                            </button>
+                            </button>        
                         </div>
+
                     <div className="button-container">
                         <button type="submit">Submit</button>
-                       
+                        
                     </div>
+                    <button onClick={handleLogout}>Logout</button>
                 </form>
             </div>
         </motion.div>

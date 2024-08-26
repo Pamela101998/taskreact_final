@@ -227,3 +227,9 @@ form div input {
   padding: 10px;
  
 }
+
+.logout{
+  color: rgb(72, 183, 203);
+  text-decoration: none;
+  font-weight: bold;
+}
