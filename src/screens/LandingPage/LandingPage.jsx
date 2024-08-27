@@ -9,12 +9,13 @@ const LandingPage = () => {
     return (
         <>
         <div>
-            <header className="App-header">
-                <Cabecera className="fondo"
+            <header>
+                <Cabecera 
                     unit="Módulo 7: " 
                     title="DESARROLLO FRONTED CON REACTJS" 
                 />
-
+            </header>
+            <section>
                    <Cuerpo
                         tema1="Componentes funcionales y de clase"
                         tema2="Uso de React Hooks como useState y useEffect"
@@ -25,11 +26,11 @@ const LandingPage = () => {
                         tema7="Manejo de Formularios en React"
                         tema8="Publicando nuestra Pagina con GitHub Pages"
                    />
-                  
-                 </header>
+            </section>  
+                 
                  <Footer
-                        // year="2024 " 
-                        // module="Módulo 7 "
+                        year="2024 " 
+                        module="Módulo 7 "
                    />
             </div>   
         </>

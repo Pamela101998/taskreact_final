@@ -2,11 +2,11 @@ const Footer = ({year, module}) => {
     return(
 
         <>
-            {/* <div>
-                {year}
+            <div className="footeer">
+            ©  {year}
                 {module}
                 USIP
-            </div> */}
+            </div>
         </>
     );
 

@@ -1,6 +1,6 @@
 const Cabecera = ({unit, title}) =>{
     return (
-        <div className="fondo"> 
+        <div className="cabecera"> 
             <b>
                 {unit}
                 {title}

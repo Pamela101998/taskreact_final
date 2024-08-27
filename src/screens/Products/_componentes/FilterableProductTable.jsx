@@ -9,7 +9,7 @@ function FilterableProductTable({ products }) {
   const [inStockOnly, setInStockOnly] = useInStockFilter();
 
   return (
-    <div>
+    <div style={{ textAlign: 'center' }}>
       <SearchBar
         filterText={filterText}
         inStockOnly={inStockOnly}

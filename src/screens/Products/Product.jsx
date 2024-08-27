@@ -14,7 +14,7 @@ const Product = () => {
  
 
   return (
-    <div>
+    <div style={{ textAlign: 'center' }}>
       <h1>Product List</h1>
       <FilterableProductTable products={PRODUCTS} />
     </div>

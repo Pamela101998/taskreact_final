@@ -22,13 +22,12 @@ const LoginForm = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        // para verificar la contraseña antes de guardar los datos
-        if (values.password === '123456') {
+        if (values.password === 'mod7ReactUSIP') {
             console.log('Datos guardados:', values);
             
             dispatch(saveFormData(values)); 
             dispatch(setUsername(values.username));
-            
+            alert('Validación exitosa');
         } else {
             showModal();  
         }
@@ -83,11 +82,14 @@ const LoginForm = () => {
 
             <div className="container">
                 <form onSubmit={handleSubmit}>
+                    <h2>Login Form</h2>
+
+                    <h3 style={{ textAlign: 'center' }}>Username: {values.username} </h3>
+
                     <h5>username: {form.formData.username}</h5>
                     <h5>email: {form.formData.email}</h5>
                     <h5>password: {form.formData.password}</h5>
 
-                    <h3>Username: {values.username} </h3>
                     <div>
                         <label htmlFor="username">Username</label>
                         <input
@@ -129,7 +131,12 @@ const LoginForm = () => {
                         </div>
 
                     <div className="button-container">
-                        <button type="submit">Submit</button>
+                        <button 
+                            type="submit" 
+                            style={{ marginRight: '20px' }}>
+                                Submit
+                        </button>
+
                         <a onClick={showModalLog}>Logout</a>
 
                     </div>

@@ -1,8 +1,7 @@
 .App {
-  text-align: center;
+  display: flex;              /* Flexbox para centrar contenido */
 
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -80,11 +79,11 @@ h5 {
   padding: 0;
   margin-right: 2rem;
   position: absolute;
-  left: 80%;
+  left: 75%;
   
 }
 a:hover {
-  color: #ffcc00;
+  color: #2391ec;
 }
 
 .container {
@@ -98,9 +97,9 @@ form {
   max-width: 400px;
   margin: 0 auto;
   padding: 30px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: #eaae36;
 }
 
 form h2 {
@@ -141,9 +140,7 @@ form div input {
   font-size: 16px;
   margin-top: 10px;
 }
-/* styles forms*/
 
-/* styles for modals */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -188,48 +185,45 @@ form div input {
   background-color: rgb(56, 224, 154);
   margin: 20px 0;
 }
-.fondo{
-  width: 90%;          /* Ancho del div */
-  height: 30px;         /* Altura del div */
-  padding: 20px;         /* Espacio interno alrededor del contenido */
-  background-color: #4deedb; /* Color de fondo */
-  border-radius: 15px;   /* Radio del borde para redondear las esquinas */
-  display: flex;         /* Centra el contenido dentro del div */
-  align-items: center;   /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
-  color: black;          /* Color del texto */
-  text-align: center;   
+
+
+.cabecera{
+  width: 80%;                           /* Ancho del 80% del contenedor principal */
+  height: 60px;               /* Altura fija */
+  padding: 20px;              /* Espaciado interno */
+  background-color: #eaae36;  /* Color de fondo */
+  border-radius: 15px;        /* Bordes redondeados */
+  display: flex;              /* Flexbox para centrar contenido dentro */
+  align-items: center;        /* Centrar verticalmente el contenido */
+  justify-content: center;    /* Centrar horizontalmente el contenido */
+  color: black;               /* Color del texto */
+  text-align: center;         /* Alinear texto al centro */
+  margin-top: 2em; 
+  margin-right: 10%;
+  margin-left: 9%;
+}
+.body{
+  margin-left: 10%; 
+  margin-right: 9%; 
 }
 
-.contenido{
-  content: '';
-  display: block;
-  height: 3px;
-  margin: 20px 0;
-  width: 90%;            
-  margin: 0 auto;        
-  padding: 20px;
-}
-.section1::after {
-  content: '';
-  display: block;
+.footeer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 3px;
-  background-color: rgba(56, 224, 154, 0.251);
-  margin: 20px 0;
-}
-
-.abajo {
-  background-color: #f1f1f1;
-  text-align: center;
-  margin: 20px 0;
-  width: 100%;                  
-  padding: 10px;
- 
+  height: 2.5rem;  
+  text-align: center; 
+  line-height: 2.5rem;      
 }
 
 .logout{
   color: rgb(72, 183, 203);
   text-decoration: none;
   font-weight: bold;
+}
+
+.bodyProduct{
+  display: flex;              /* Flexbox para centrar contenido dentro */
+  align-items: center;        /* Centrar verticalmente el contenido */
+  justify-content: center;
 }

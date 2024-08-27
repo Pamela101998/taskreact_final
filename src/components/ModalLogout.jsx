@@ -15,7 +15,7 @@ const ModalLogout = ({ visible, message, onClose, onLogout }) => {
             >
                 <div>
                     <p>{message}
-                    <button
+                    <button style={{ marginLeft: '20px' }}
                         onClick={onLogout}>
                         Presionar para salir
                     </button>

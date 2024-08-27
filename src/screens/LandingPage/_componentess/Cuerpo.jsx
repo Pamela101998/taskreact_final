@@ -1,14 +1,14 @@
 const Cuerpo = ({tema1, tema2, tema3, tema4, tema5, tema6, tema7, tema8}) =>{
     return (
-        <div className="contenido">
+        <div className="body">
               <div className="section">
                
                     <h4>Bienvenido</h4>
                     
                 </div>
-                <p>Este módulo se centra en el uso de React, 
-                    incluyendo la creación de componentes, 
-                    el manejo de hooks, y el uso de Redux </p>
+                <p>Este módulo se centra en el uso de <b>React</b>, 
+                    incluyendo la creación de <b>componentes</b>, 
+                    el manejo de <b>hooks</b>, y el uso de <b>Redux</b> </p>
                 <div className="section">
                     <h4>Temas</h4>
                     

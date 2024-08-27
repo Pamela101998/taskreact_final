@@ -25,7 +25,17 @@ const Navbar = () => {
                 </li>
 
                 <li>
-                    <h5>Bienvenido:{userName}</h5>
+                    <h5>
+                        Bienvenido: 
+                            <span 
+                                style={{ color: 'red', 
+                                         fontSize: '1.2em',
+                                         marginLeft: '20px'
+                                       }}
+                            >
+                                {userName}
+                            </span>
+                    </h5>
                 </li>
             </ul>
         </nav>
