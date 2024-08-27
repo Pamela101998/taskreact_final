@@ -2,8 +2,10 @@ import { createBrowserRouter } from 'react-router-dom';
 import Default from '../screens/Default/Default';
 import Product from '../screens/Products/Product';
 import LoginForm from '../screens/Forms/LoginForm';
-import LandingPage from '../screens/LandingPage/LandingPage'; // Asegúrate de ajustar la ruta si es diferente
+import LandingPage from '../screens/LandingPage/LandingPage'; 
 import App from '../App';
+
+const basename = process.env.NODE_ENV === 'production' ? '/taskreact_final' : '/';
 
 const routes = createBrowserRouter([
     {
@@ -28,6 +30,10 @@ const routes = createBrowserRouter([
             },
         ]
     }
-]);
+],
+    {
+        basename:    basename
+    }
+);
 
 export default routes;
