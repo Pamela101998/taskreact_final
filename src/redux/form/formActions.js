@@ -1,6 +1,6 @@
 import { SET_FORM_DATA } from './formTypes';
 import { SET_USERNAME } from './formTypes';
-// import { CLEAR_FORM_DATA } from './formTypes';
+import { CLEAR_FORM_DATA } from './formTypes';
 
 export const saveFormData = (formData) => {
     return {
@@ -16,8 +16,9 @@ export const setUsername = (formData) => {
     }
 }
 
-// export const clearFormData = () => {
-//     return {
-//         type: CLEAR_FORM_DATA,
-//     };
-// };
+export const clearFormData = (formData) => {
+    return {
+        type: CLEAR_FORM_DATA,
+        payload: formData,
+    };
+};

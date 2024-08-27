@@ -2,8 +2,10 @@ import useForm from "../../hooks/useForm";
 import { useSelector, useDispatch } from 'react-redux';
 import {saveFormData} from "../../redux/form/formActions";
 import { setUsername } from "../../redux/form/formActions";
+import { clearFormData } from "../../redux/form/formActions";
 import { motion } from 'framer-motion';
 import ModalInfo from "../../components/ModalInfo";
+import ModalLogout from "../../components/ModalLogout";
 // import { Link } from "react-router-dom";
 
 import { useState } from "react";
@@ -11,7 +13,9 @@ import { useState } from "react";
 const LoginForm = () => {
     const [values, handleChange, resetForm] = useForm({ username: '', email: '', password: ''});
     const [showModalInfo, setShowModalInfo] = useState(false);
+    const [showModalLogout, setShowModalLogout] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
+
     const form = useSelector(state => state.form);
     const dispatch = useDispatch();
 
@@ -21,8 +25,10 @@ const LoginForm = () => {
         // para verificar la contraseña antes de guardar los datos
         if (values.password === '123456') {
             console.log('Datos guardados:', values);
+            
             dispatch(saveFormData(values)); 
-            dispatch(setUsername(values.username)); 
+            dispatch(setUsername(values.username));
+            
         } else {
             showModal();  
         }
@@ -35,15 +41,26 @@ const LoginForm = () => {
     const showModal = () => {
         setShowModalInfo(true);
     };
+
    
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
+
+
     const handleLogout = () => {
-        resetForm(true); 
-        // <Link to="/"></Link>
+        resetForm(); 
+        dispatch(clearFormData(values));
+        hideModalLogout();
     };
 
+    const hideModalLogout = () => {
+        setShowModalLogout(false);
+    };
+   
+    const showModalLog = () => {
+        setShowModalLogout(true);
+    };
     return (
         <motion.div
             initial={{opacity: 0, y: -70}}
@@ -55,7 +72,13 @@ const LoginForm = () => {
                 message="Password incorrecto"
                 onClose={hideModalInfo}
             />
-           
+
+            <ModalLogout
+                visible={showModalLogout}
+                message="¿Estas seguro de que quieres cerrar sesión?"
+                onLogout={handleLogout}
+                onClose={hideModalLogout}
+            />
 
 
             <div className="container">
@@ -63,6 +86,8 @@ const LoginForm = () => {
                     <h5>username: {form.formData.username}</h5>
                     <h5>email: {form.formData.email}</h5>
                     <h5>password: {form.formData.password}</h5>
+
+                    <h3>Username: {values.username} </h3>
                     <div>
                         <label htmlFor="username">Username</label>
                         <input
@@ -105,12 +130,17 @@ const LoginForm = () => {
 
                     <div className="button-container">
                         <button type="submit">Submit</button>
-                        
+                        <a onClick={showModalLog}>Logout</a>
+
                     </div>
-                    <button onClick={handleLogout}>Logout</button>
+                    
                 </form>
             </div>
+           
         </motion.div>
+      
+        
+   
     );
 };
 

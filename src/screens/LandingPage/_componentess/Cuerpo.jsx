@@ -1,7 +1,7 @@
 const Cuerpo = ({tema1, tema2, tema3, tema4, tema5, tema6, tema7, tema8}) =>{
     return (
         <div className="contenido">
-              <div class="section">
+              <div className="section">
                
                     <h4>Bienvenido</h4>
                     
@@ -9,7 +9,7 @@ const Cuerpo = ({tema1, tema2, tema3, tema4, tema5, tema6, tema7, tema8}) =>{
                 <p>Este módulo se centra en el uso de React, 
                     incluyendo la creación de componentes, 
                     el manejo de hooks, y el uso de Redux </p>
-                <div class="section">
+                <div className="section">
                     <h4>Temas</h4>
                     
                 </div>
@@ -25,7 +25,7 @@ const Cuerpo = ({tema1, tema2, tema3, tema4, tema5, tema6, tema7, tema8}) =>{
                         <li>{tema8}</li>
 
                     </ul>
-                    <div class="section">
+                    <div className="section">
                       <h4>Recursos Adicionales</h4>
                     </div>
                     <p>Para profundizar en los temas cubiertos, consulta los siguientes recursos</p>
