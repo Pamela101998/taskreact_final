@@ -6,7 +6,7 @@ const Cabecera = ({unit, title}) =>{
                 {title}
             </b>
         </div>
-    );
+    ); 
 }
 
 export default Cabecera;

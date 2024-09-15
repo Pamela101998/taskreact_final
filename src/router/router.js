@@ -4,9 +4,9 @@ import Product from '../screens/Products/Product';
 import LoginForm from '../screens/Forms/LoginForm';
 import LandingPage from '../screens/LandingPage/LandingPage'; 
 import App from '../App';
+import DictionaryPage from '../screens/Dictionary/DictionaryPage';
 
 const basename = process.env.NODE_ENV === 'production' ? '/taskreact_final' : '/';
-
 const routes = createBrowserRouter([
     {
         path: '/',
@@ -28,6 +28,11 @@ const routes = createBrowserRouter([
                 path: 'login',
                 element: <LoginForm />,
             },
+            {
+                path: 'dictionary',
+                element: <DictionaryPage />,
+            },
+            
         ]
     }
 ],

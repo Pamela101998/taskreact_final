@@ -16,7 +16,7 @@ const Product = () => {
   return (
     <div style={{ textAlign: 'center' }}>
       <h1>Product List</h1>
-      <FilterableProductTable products={PRODUCTS} />
+      < FilterableProductTable products={PRODUCTS} />
     </div>
   );
 };

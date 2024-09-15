@@ -23,7 +23,10 @@ const Navbar = () => {
                 <li>
                     <Link to="/default">Default</Link>
                 </li>
-
+                <li>
+                    <Link to="/dictionary">Dictionary</Link>
+                </li>
+              
                 <li>
                     <h5>
                         Bienvenido: 

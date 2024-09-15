@@ -94,7 +94,7 @@ a:hover {
 }
 
 form {
-  max-width: 400px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 30px;
   border: 1px solid black;
@@ -221,9 +221,51 @@ form div input {
   text-decoration: none;
   font-weight: bold;
 }
-
-.bodyProduct{
-  display: flex;              /* Flexbox para centrar contenido dentro */
-  align-items: center;        /* Centrar verticalmente el contenido */
+.content {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  
+}
+.parrafo{
+  font-family: monospace;
+  max-width: 730px;
+  margin: 0 auto;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5; 
+}
+
+.titulo{
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-size: 60px;
+}
+.container-buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20vh; 
+}
+
+.button-group {
+  display: flex;
+  gap: 100px; 
+  margin-bottom: 30px; 
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 4px solid black;
+  background-color: white;
+  cursor: pointer;
+  
+}
+
+button:hover {
+  background-color: #b4f5e6;
 }
